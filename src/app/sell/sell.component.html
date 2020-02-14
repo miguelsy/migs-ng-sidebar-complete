@@ -1,0 +1,40 @@
+<div class="d-flex text-break" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="list-group list-group-flush">
+      <a routerLink="/" class="list-group-item list-group-item-action bg-light">Home</a>
+      <a routerLink="/channels" class="list-group-item list-group-item-action bg-light">Discover</a>
+      <a routerLink="/trending" class="list-group-item list-group-item-action bg-light">Trending</a>
+      <a *ngIf="cookieExists" routerLink="/subscriptions" class="list-group-item list-group-item-action bg-light">Subscriptions</a>
+      <a *ngIf="cookieExists" routerLink="/history" class="list-group-item list-group-item-action bg-light">History</a>
+      <a *ngIf="cookieExists" routerLink="/playlists" class="list-group-item list-group-item-action bg-light">My Playlists</a>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <div id="page-content-wrapper">
+    <section class="demo-contents">
+      <h1>My Cars for Sale</h1>
+      
+      <div class="card mx-auto" style="width:300px; height:300px">
+        <div class="card-body">
+          <h5 class="card-title text-center mt-3 mb-5">CAR PHOTO</h5>
+          <h5 class="text-center">Vehicle Name</h5>
+          <h5 class="text-center">Vehicle Make</h5>
+          <h5 class="text-center">Vehicle Color</h5>
+          <h5 class="text-center">Vehicle Make</h5>
+        </div>
+      </div>
+
+      <div class="card mx-auto mt-3" style="width:300px; height:300px">
+        <div class="card-body">
+          <h5 class="card-title text-center mt-3 mb-5">CAR PHOTO</h5>
+          <h5 class="text-center">Vehicle Name</h5>
+          <h5 class="text-center">Vehicle Make</h5>
+          <h5 class="text-center">Vehicle Color</h5>
+          <h5 class="text-center">Vehicle Make</h5>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
