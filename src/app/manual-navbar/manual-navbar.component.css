@@ -1,3 +1,39 @@
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.75;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.sidebar {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  pointer-events: auto;
+  position: fixed;
+  touch-action: auto;
+  will-change: initial;
+  z-index: 2;
+}
+
+.sidebar-contents {
+  padding: 2em 1em
+}
+
+.aside {
+  background-color: #fff;
+}
+
+.sidebar-left {
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
 ::selection {
   background-color: #0273d4;
   color: #fff;

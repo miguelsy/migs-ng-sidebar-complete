@@ -111,7 +111,7 @@ export class AppComponent implements OnInit  {
   }
 
   private setFilters(): void {
-    this.filters = ['year', 'make', 'model'];
+    this.filters = ['2020', 'Honda', 'NSX'];
     this.sidebarService.setFilterList(this.filters);
     this._opened = false;
   }

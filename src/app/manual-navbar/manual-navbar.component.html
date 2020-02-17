@@ -1,0 +1,50 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleSidebar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" routerLink="/home">CARWAVE Custom Sidebar</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/buy">Buy <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/sell">Sell</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Transactions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="#">Action</a>
+          <a class="dropdown-item" routerLink="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="#" tabindex="-1" aria-disabled="true">Dealers</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidebar-container">
+  <div *ngIf="showSidebar" class="sidebar-backdrop" (click)="toggleSidebar()">
+  </div>
+  <div [@openClose]="showSidebar ? 'open' : 'closed'" class="sidebar aside sidebar-left sidebar-animate">
+    <div class="sidebar-contents text-nowrap">
+      <h5>CARWAVE</h5>
+      <a (click)="toggleSidebar()" class="d-block" routerLink="/home">Home</a>
+      <a (click)="toggleSidebar()" class="d-block" routerLink="/buy">Buy</a>
+      <div class="ml-3 my-2 p-0 loading skeleton-label-sm" *ngIf="!items"></div>
+      <div class="ml-3 my-2 p-0 loading skeleton-label-sm" *ngIf="!items"></div>
+      <div class="ml-3 my-2 p-0 loading skeleton-label-sm" *ngIf="!items"></div>
+      <a *ngFor="let item of items" class="d-block ml-3" (click)="toggleSidebar()" routerLink="/buy">{{item}}</a>
+      <a (click)="toggleSidebar()" class="d-block" routerLink="/sell">Sell</a>
+      <a (click)="toggleSidebar()" class="d-block">My Transactions</a>
+      <a (click)="toggleSidebar()" class="d-block">Dealers</a>
+    </div>
+  </div>
+</div>
