@@ -8,6 +8,8 @@
   opacity: 0.75;
   pointer-events: auto;
   z-index: 1;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .sidebar {
