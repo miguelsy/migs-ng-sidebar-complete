@@ -27,6 +27,8 @@ import {
 })
 export class ManualNavbarComponent implements OnInit {
 
+  items: string[] = [];
+
   showSidebar: boolean = false;
 
   constructor() { }
@@ -36,5 +38,10 @@ export class ManualNavbarComponent implements OnInit {
 
   toggleSidebar() {
     this.showSidebar = !this.showSidebar;
+    this.items = undefined;
+
+    setTimeout(() => {
+      this.items = ['auction 1', 'auction 2', 'auction 3'];
+    }, 3000)
   }
 }
